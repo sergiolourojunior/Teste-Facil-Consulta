@@ -1,0 +1,25 @@
+#Bloqueia Listagem dos Arquivos do Diretório
+Options -Indexes
+
+#Ativa o Modo de Reescrita
+RewriteEngine On
+
+#Condição para Não Aplicar a Regra para arquivos que existam
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+#Condição para Não Aplicar a Regra para diretórios que existam
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+#Regra de Reescreita (Onde qualquer String ".*" após a pasta, 
+#será interpretado por index.php passando a variável URL) 
+RewriteRule ^(.*)$ index.php?url=$1
+
+#Libera os Sites Abaixo para usar os arquivos liberados
+#RewriteCond %{HTTP_REFERER} !^http://(.+\.)?localhost/minha-comanda/.*$ [NC]
+#RewriteCond %{HTTP_REFERER} !^http://(.+\.)?dominio.com.br/.*$ [NC]
+#RewriteCond %{HTTP_REFERER} !^http://(.+\.)?google\.com\.br/.*$ [NC]
+#RewriteRule .*\.(jpe?g|png|gif|bmp)$ - [F,NC] 
+
+#Bloqueando arquivos importantes
+#RewriteCond %{HTTP_REFERER} !^http://(.+\.)?localhost/minha-comanda/.*$ [NC]
+#RewriteRule .*\.(css|js|php)$ - [F,NC] 

@@ -1,0 +1,15 @@
+a { -webkit-transition: all .5s cubic-bezier(.215,.61,.355,1); -moz-transition: all .5s cubic-bezier(.215,.61,.355,1); -o-transition: all .5s cubic-bezier(.215,.61,.355,1); transition: all .5s cubic-bezier(.215,.61,.355,1); }
+body { font-family: 'Signika'; font-weight: 400 }
+
+#notificacao i { font-size: 82px; display: none; }
+#notificacao h3 { margin: 10px 0 10px; font-size: 24px; }
+#notificacao p { font-size: 16px; color: #666; }
+#notificacao.modal_success i.icon-check,
+#notificacao.modal_success h3 { color: #318c51; display: inline-block; }
+#notificacao.modal_danger i.icon-close,
+#notificacao.modal_danger h3 { color: #860909; display: inline-block; }
+#notificacao.modal_warning i.icon-exclamation,
+#notificacao.modal_warning h3 { color: #F5BB00; display: inline-block; }
+
+#modalDelete {}
+#modalDelete .modal-body {}
