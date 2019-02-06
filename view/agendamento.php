@@ -20,13 +20,21 @@
 							?>
 							<li>
 								<h5>Data: <?=date('d/m/Y', strtotime($d['date']))?></h5>
-								<?php foreach($d['horarios'] as $h){ ?>
+								<?php
+								foreach($d['horarios'] as $h){
+									if($h->agendado){
+										echo '<button class="btn btn-info disabled" type="button">'.$h->hora.'</button>';
+									} else {
+								?>
 								<form class="form-inline">
-									<button class="btn btn-info <?=$h->agendado ? 'disabled' : '' ?>"><?=$h->hora?></button>
+									<button class="btn btn-info"><?=$h->hora?></button>
 									<input type="hidden" name="id" value="<?=$h->id?>">
 									<input type="hidden" name="action" value="agendar">
 								</form>
-								<?php } ?>
+								<?php
+									}
+								}
+								?>
 							</li>
 							<?php
 							}

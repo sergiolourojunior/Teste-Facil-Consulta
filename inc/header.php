@@ -22,7 +22,7 @@
 					<li><a href="<?=LINK?>logout">Sair</a></li>
 					<?php } else { ?>
 					<li <?=PAGE=='login' ? 'class="active"' : ''?>><a href="<?=LINK?>login">Login</a></li>
-					<li <?=PAGE=='registro' ? 'class="active"' : ''?>><a href="<?=LINK?>registro">Registro</a></li>
+					<li <?=PAGE=='cadastro' ? 'class="active"' : ''?>><a href="<?=LINK?>cadastro">Cadastro</a></li>
 					<?php } ?>
 				</ul>
 			</div><!-- /.navbar-collapse -->

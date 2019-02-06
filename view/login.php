@@ -23,7 +23,7 @@
 					</form>
 				</div>
 				<div class="panel-footer">
-					Não possui cadastro? <a href="<?=LINK?>registro">Registre-se</a>.
+					Não possui cadastro? <a href="<?=LINK?>cadastro">Cadastre-se</a>.
 				</div>
 			</div>
 		</div>

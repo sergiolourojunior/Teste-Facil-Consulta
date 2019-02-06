@@ -154,7 +154,7 @@ if(isset($_POST['action'])) {
 			if($m->delete()) {
 				session_destroy();
 				$return['success'] = true;
-				$return['location'] = LINK.'registro';
+				$return['location'] = LINK.'cadastro';
 			} else {
 				$return = false;
 				$return['text'] = 'Houve um erro! Tente novamente.';

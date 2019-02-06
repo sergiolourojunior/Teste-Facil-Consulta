@@ -3,7 +3,7 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Registro</h3>
+					<h3 class="panel-title">Cadastro</h3>
 				</div>
 				<div class="panel-body">
 					<form>
@@ -29,7 +29,7 @@
 							<input type="text" name="address" data-valid="text" placeholder="Insira o endereço do consultório" class="form-control">
 						</div>
 						<div class="form-group">
-							<button class="btn btn-block btn-primary">Registrar</button>
+							<button class="btn btn-block btn-primary">Cadastrar</button>
 							<input type="hidden" name="action" value="register">
 						</div>
 					</form>

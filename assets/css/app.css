@@ -19,9 +19,9 @@ form { position: relative; }
 .form-control.is-valid { border-color: #28acb8; }
 .form-control.is-invalid { border-color: #e73d4a; }
 
-.panel-agendamento {}
 .panel-agendamento hr { border-top-color: #CCC; }
 .panel-agendamento form { display: inline-block; }
+.panel-agendamento button.disabled { margin-right: 5px; }
 .panel-agendamento ul { margin-left: 20px; margin-top: 15px; }
-.panel-agendamento {}
-.panel-agendamento {}
+
+.panel-agenda .panel-body { height: 60px; }

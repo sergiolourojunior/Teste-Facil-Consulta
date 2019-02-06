@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('BASE_URL', 'teste/');
+define('BASE_URL', 'facil-consulta/');
 define('LINK', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http').'://'.$_SERVER['HTTP_HOST'].'/'.BASE_URL);
 define('DIR', __DIR__.'/');
 define('ASSETS', LINK.'assets/');
@@ -13,11 +13,11 @@ define('SITE_COLOR', '#0094cf');
 define('SITE_DESCRIPTION', '');
 define('SITE_KEYWORD', '');
 
-define('DB_HOST', 'mysql.sergio.kinghost.net');
+define('DB_HOST', 'localhost');
 define('DB_PORT', '');
-define('DB_NAME', 'sergio');
-define('DB_USER', 'sergio');
-define('DB_PASS', 'Sergio987');
+define('DB_NAME', 'facil_consulta');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 date_default_timezone_set('America/Sao_Paulo');
 ini_set('upload_max_filesize', '10M');

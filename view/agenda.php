@@ -25,18 +25,20 @@
 		</div>
 		<?php foreach($horarios as $k=>$horario){ ?>
 		<div class="col-md-3 col-sm-4">
-			<div class="panel <?=$horario->agendado ? 'panel-info' : 'panel-default'?>">
+			<div class="panel <?=$horario->agendado ? 'panel-info' : 'panel-default'?> panel-agenda">
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title clearfix"><?=date('d/m/Y - H:i', strtotime($horario->data))?></h3>
+				</div>
+				<div class="panel-body">
 					<?=$horario->agendado ? '<em>Agendado</em>' : ''?>
+					<?php if(!$horario->agendado){ ?>
 					<form class="pull-right">
-						<?php if(!$horario->agendado){ ?>
 						<div class="alert hidden"></div>
 						<input type="hidden" name="action" value="delete_calendar">
 						<input type="hidden" name="id" value="<?=$horario->id?>">
-						<?php } ?>
-						<button class="btn btn-sm <?=$horario->agendado ? 'btn-default disabled' : 'btn-danger'?>">Excluir</button>
+						<button class="btn btn-sm btn-danger">Excluir</button>
 					</form>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
