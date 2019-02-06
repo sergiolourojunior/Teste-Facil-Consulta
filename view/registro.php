@@ -18,7 +18,7 @@
 						</div>
 						<div class="form-group">
 							<label>Senha</label>
-							<input type="password" name="pass" id="password" data-valid="text" placeholder="Insira sua senha" class="form-control">
+							<input type="password" name="pass" id="password" data-valid="text" placeholder="Mínimo 6 caracteres" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Confirmar Senha</label>

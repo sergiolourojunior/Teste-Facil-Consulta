@@ -12,8 +12,8 @@ var app = {
 
 		$("form").on('submit', function(event) {
 			event.preventDefault();
-			// $('.loader').fadeIn();
 			var form = $(this);
+			form.find('.form-control, .btn').addClass('disabled');
 			var alert = form.find(".alert");
 			alert.addClass('hidden');
 			if(form.find('[data-valid].is-valid, [data-eq-for].is-valid').length==form.find('[data-valid]').length){
@@ -27,7 +27,6 @@ var app = {
 					contentType: false,
 					processData: false,
 					success: function(data) {
-						console.log(data);
 						if(jQuery.parseJSON(data)) {
 							var data = jQuery.parseJSON(data);
 							if(data.location) location.href = data.location;
@@ -48,6 +47,7 @@ var app = {
 						} else {
 							console.log(data);
 						}
+						form.find('.form-control, .btn').removeClass('disabled');
 					}
 				});
 			}

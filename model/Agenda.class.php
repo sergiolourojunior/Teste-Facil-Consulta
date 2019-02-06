@@ -81,7 +81,7 @@ class Agenda extends Conexao {
         try {
             if(!is_numeric($this->id_medico)) return false;
 
-            $sql = "SELECT DISTINCT(DATE_FORMAT(data, '%Y-%m-%d')) as date FROM agenda WHERE id_medico = :id_medico";
+            $sql = "SELECT DISTINCT(DATE_FORMAT(data, '%Y-%m-%d')) as date FROM agenda WHERE id_medico = :id_medico AND data >= current_timestamp ORDER BY data ASC";
             $bd = $this->conexao->prepare($sql);
             $bd->bindValue(':id_medico', $this->id_medico);
             $bd->execute();

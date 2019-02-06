@@ -5,7 +5,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-3 col-sm-4 col-xs-6">
+		<div class="col-md-3 col-sm-4">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">Adicionar</h3>
@@ -24,7 +24,7 @@
 			</div>
 		</div>
 		<?php foreach($horarios as $k=>$horario){ ?>
-		<div class="col-md-3 col-sm-4 col-xs-6">
+		<div class="col-md-3 col-sm-4">
 			<div class="panel <?=$horario->agendado ? 'panel-info' : 'panel-default'?>">
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title clearfix"><?=date('d/m/Y - H:i', strtotime($horario->data))?></h3>
