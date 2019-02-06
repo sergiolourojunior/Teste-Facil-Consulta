@@ -8,11 +8,11 @@
 
 ## Instalação
 - Banco de Dados
--- Executar arquivo "database/estrutura.sql";
--- Executar arquivo "database/dados.sql"
+	- Executar arquivo "database/estrutura.sql";
+	- Executar arquivo "database/dados.sql"
 - Aplicação
--- Setar a constante BASE_URL no arquivo "config.php"
--- Setar as conexões do Banco de Dados no arquivo "config.php"
+	- Setar a constante BASE_URL no arquivo "config.php"
+	- Setar as conexões do Banco de Dados no arquivo "config.php"
 
 ### Observações:
 Senha padrão dos usuários: facilconsulta

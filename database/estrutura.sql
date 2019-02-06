@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `teste_facil_consulta`;
+CREATE DATABASE IF NOT EXISTS `facil_consulta`;
 
-USE `teste_facil_consulta`;
+USE `facil_consulta`;
 
 CREATE TABLE IF NOT EXISTS `medico` (
 	`id` BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
