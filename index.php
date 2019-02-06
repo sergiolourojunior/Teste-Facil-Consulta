@@ -11,6 +11,10 @@ define("PARAM3", isset($url[3]) ? $url[3] : '');
 define("PARAM4", isset($url[4]) ? $url[4] : '');
 define("PARAM5", isset($url[5]) ? $url[5] : '');
 
+$private_pages = array('agenda','logout','perfil');
+
+if(in_array(PAGE, $private_pages) && !isset($_SESSION['logado'])) header('Location: '.LINK.'login'); 
+
 include DIR.'inc/functions.php';
 
 function __autoload($classe) {
@@ -45,46 +49,14 @@ function __autoload($classe) {
 		</div>
 	</div>
 	<?php
-	if(PAGE!='login') include DIR.'inc/header.php';
+	include DIR.'inc/header.php';
 
 	if(file_exists(DIR.'view/'.PAGE.'.php')) include DIR.'view/'.PAGE.'.php';
 	
-	if(PAGE!='login') include DIR.'inc/footer.php';
+	include DIR.'inc/footer.php';
 	?>
 	<input id="app-infos" type="hidden" data-link="<?=LINK?>" data-page="<?=PAGE?>">
 
-	<!-- Modal -->
-	<div id="notificacao" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-sm">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-body text-center">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<i class="icon-check"></i>
-					<i class="icon-close"></i>
-					<i class="icon-exclamation"></i>
-					<h3>Mensagem enviada</h3>
-					<p>Entraremos em contato em breve.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal Excluir -->
-	<div id="modalDelete" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-sm">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-body text-center">
-					<h5 class="mt-3">Deseja realmente excluir?</h5>
-					<nav class="clearfix mt-5">
-						<button data-dismiss="modal" class="btn btn-outline-secondary float-left">Cancelar</button>
-						<button class="btn btn-primary float-right">Confirmar</button>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 
 <?php include DIR.'inc/css.php' ?>

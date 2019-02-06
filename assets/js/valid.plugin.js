@@ -9,7 +9,7 @@ $(document).ready(function(){
 		var type = elemento.data("valid");
 		switch(type) {
 			case 'text':
-				if(elemento.val().length==0) {
+				if(elemento.val().length < 6 || elemento.val().length > 112) {
 					parent.removeClass('is-valid');
 					parent.addClass('is-invalid');
 				} else {
@@ -18,7 +18,7 @@ $(document).ready(function(){
 				}
 				break;
 			case 'email':
-				if(elemento.val().length<5 || elemento.val().indexOf('@')==-1 || elemento.val().indexOf('.')==-1) {
+				if(elemento.val().length<6 || elemento.val().length>112 || elemento.val().indexOf('@')==-1 || elemento.val().indexOf('.')==-1) {
 					parent.removeClass('is-valid');
 					parent.addClass('is-invalid');
 				} else {
@@ -28,12 +28,12 @@ $(document).ready(function(){
 				break;
 			case 'equals':
 				var eqOrigin = elemento.data("eq-for");
-				if(elemento.val()!=$('#'+eqOrigin).val()) {
-					parent.removeClass('is-valid');
-					parent.addClass('is-invalid');
-				} else {
+				if(elemento.val()==$('#'+eqOrigin).val() && elemento.val().length>=6 && elemento.val().length<=112) {
 					parent.addClass('is-valid');
 					parent.removeClass('is-invalid');
+				} else {
+					parent.removeClass('is-valid');
+					parent.addClass('is-invalid');
 				}
 				break;
 		}

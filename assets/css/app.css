@@ -1,15 +1,27 @@
 a { -webkit-transition: all .5s cubic-bezier(.215,.61,.355,1); -moz-transition: all .5s cubic-bezier(.215,.61,.355,1); -o-transition: all .5s cubic-bezier(.215,.61,.355,1); transition: all .5s cubic-bezier(.215,.61,.355,1); }
-body { font-family: 'Signika'; font-weight: 400 }
+body { font-family: 'Signika'; font-weight: 400; background-color: #EFEFEF }
 
-#notificacao i { font-size: 82px; display: none; }
-#notificacao h3 { margin: 10px 0 10px; font-size: 24px; }
-#notificacao p { font-size: 16px; color: #666; }
-#notificacao.modal_success i.icon-check,
-#notificacao.modal_success h3 { color: #318c51; display: inline-block; }
-#notificacao.modal_danger i.icon-close,
-#notificacao.modal_danger h3 { color: #860909; display: inline-block; }
-#notificacao.modal_warning i.icon-exclamation,
-#notificacao.modal_warning h3 { color: #F5BB00; display: inline-block; }
+form { position: relative; }
 
-#modalDelete {}
-#modalDelete .modal-body {}
+.navbar { background-color: #0094cf; border-radius: 0; border-color: #0094cf }
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-text { color: #EFEFEF; }
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover { color: #FFF; background-color: rgba(0,0,0,.2); }
+.navbar .logo-fc { margin: 6px 20px 6px 5px; height: 38px; display: inline-block; float: left; }
+.navbar .logo-fc img { height: 38px; }
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover { background-color: transparent; }
+.navbar-default .navbar-toggle { border-color: #FFF; }
+.navbar-default .navbar-toggle .icon-bar { background-color: #FFF; }
+
+.form-control.is-valid { border-color: #28acb8; }
+.form-control.is-invalid { border-color: #e73d4a; }
+
+.panel-agendamento {}
+.panel-agendamento hr { border-top-color: #CCC; }
+.panel-agendamento form { display: inline-block; }
+.panel-agendamento ul { margin-left: 20px; margin-top: 15px; }
+.panel-agendamento {}
+.panel-agendamento {}

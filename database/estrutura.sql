@@ -17,5 +17,5 @@ CREATE TABLE IF NOT EXISTS `agenda` (
 	`id_medico` BIGINT NOT NULL,
 	`data` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
 	`agendado` BOOLEAN NULL DEFAULT 0,
-	FOREIGN KEY (`id_medico`) REFERENCES `medico` (`id`)
+	FOREIGN KEY (`id_medico`) REFERENCES `medico` (`id`) ON DELETE CASCADE
 );
